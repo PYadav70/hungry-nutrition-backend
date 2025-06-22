@@ -14,19 +14,7 @@ connectCloudinary()
 
 // middlewares
 app.use(express.json())
-// app.use(cors()) 
-
-import cors from "cors"; //we can access the backend from any ip
-
-const allowedOrigins = [
-  "https://hungry-nutrition-website-git-master-pappu-kumar-yadavs-projects.vercel.app",
-  "https://hungry-nutrition-website.vercel.app"
-];
-
-app.use(cors({
-  origin: allowedOrigins,
-  credentials: true,
-}));
+app.use(cors()) //we can access the backend from any ip
 
 //api endpoint
 app.use('/api/user',userRouter)
